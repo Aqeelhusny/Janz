@@ -44,7 +44,8 @@
           <a href="#intro" class="scrollto"
             ><img src="img/Add a little bit of body text (3).png" alt="" class="img-fluid"
           /></a>-->
-        <h2>JANZ</h2>
+          <img style="justify-content: center;" src="img/janzlogo.png" alt="Janz logo">          
+          <h2 style="display: inline;">JANZ</h2>  
       </div>
     </div>
 
@@ -883,7 +884,7 @@
                 Your message has been sent. Thank you!
               </div>
               <div id="errormessage"></div>
-              <form action="" onsubmit="ssendEmail(); return false" method="post" role="form" class="contactForm">
+              <form action="send.php" method="post" role="form" class="contactForm" id="cForm" name="cForm" >
                 <div class="form-row">
                   <div class="form-group col-lg-6">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -907,7 +908,7 @@
                   <div class="validation"></div>
                 </div>
                 <div class="text-center">
-                  <button type="submit" title="Send Message" >
+                  <button type="submit" title="Send Message" name="send" id="send">
                     Send Message
                   </button>
                 </div>
@@ -939,10 +940,10 @@
             <h4>Useful Links</h4>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#services">Services</a></li>
+             <!-- <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>-->
             </ul>
           </div>
 
@@ -998,26 +999,7 @@
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function ssendEmail() {
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "janzcareers@gmail.com",
-        Password: "Sri@#12345!",
-        To: 'janzcareers@gmail.com',
-        From: document.getElementById("email").value,
-        Subject: document.getElementById("subject").value,
-        Body: document.getElementById("message").value
-      }).then(
-        message => alert(message)
-      )
-
-    }
-  </script>
-
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-  
 </body>
 </html>
